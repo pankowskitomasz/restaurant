@@ -1,5 +1,5 @@
 {
-  "name": "yoga_studio",
+  "name": "restaurant",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pankowskitomasz/yoga_studio.git"
+    "url": "git+https://github.com/pankowskitomasz/restaurant.git"
   },
   "author": "Tomasz Pankowski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pankowskitomasz/yoga_studio/issues"
+    "url": "https://github.com/pankowskitomasz/restaurant/issues"
   },
-  "homepage": "https://github.com/pankowskitomasz/yoga_studio#readme",
+  "homepage": "https://github.com/pankowskitomasz/restaurant#readme",
   "dependencies": {
     "bootstrap": "^5.0.0-alpha2",
     "gulp": "^4.0.2",
