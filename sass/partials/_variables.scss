@@ -1,0 +1,30 @@
+$backdrop__filter--privacy: blur(10px);
+$bg__blend--type: multiply;
+$bg__classes:
+    "error",
+    "comingsoon",
+    "privacy";
+$bg__comingsoon-img: "../img/seafood.jpg";
+$bg__error-img: "../img/error.jpg";
+$bg__privacy-img: "../img/privacy.jpg";
+$bg__aoa:
+    $bg__error-img,
+    $bg__comingsoon-img,
+    $bg__privacy-img;
+$body__min-height: 100%;
+$color__bg-1: #ddd;
+$color__dark: #333;
+$color__transparent: transparent;
+$font-logo__family: 'Raleway';
+$font-logo__size: 24px;
+$font-main__family: 'Libre Baskerville';
+$font-main__size: 16px;
+$header__height: 74px;
+$section__min-height: 100vh;
+$text__shadow: 0 0 3px $color__dark;
+$theme-colors: (
+  "primary": #fff,
+  "secondary": #a78963,
+  "dark":#101519,
+  "transparent":transparent
+);

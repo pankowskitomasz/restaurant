@@ -4,14 +4,14 @@ const uglify = require("gulp-uglify");
 const minify = require("gulp-minify-css")
 
 function js(){
-    return src(["js/*.js"])
+    return src(["js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("js/"));
 }
 
 function css(){
-    return src(["css/*.css"])
+    return src(["css/styles.css"])
     .pipe(concat("styles.min.css"))
     .pipe(minify())
     .pipe(dest("css/"));
