@@ -1,30 +1,82 @@
 $backdrop__filter--privacy: blur(10px);
+$bg__about-sub-img:
+    "../img/index/plate.jpg",
+    "../img/seafood.jpg",
+    "../img/contact_bg.jpg";
 $bg__blend--type: multiply;
+$bg__blend--over:overlay;
+$body__min-width: 360px;
 $bg__classes:
     "error",
     "comingsoon",
-    "privacy";
+    "privacy",
+    "index-sub",
+    "index",
+    "regular-menu",
+    "regular-menu-sub",
+    "specials-menu",
+    "specials-menu-sub",
+    "reservation",
+    "reservation-sub",
+    "about-sub",
+    "contact-sub",
+    "user";
 $bg__comingsoon-img: "../img/seafood.jpg";
+$bg__contact-sub-img:
+    "../img/restaurant_woman.jpg";
 $bg__error-img: "../img/error.jpg";
+$bg__index-img:
+    "",
+    "",
+    "../img/index/menu_bg.jpg",
+    "../img/index/breakfast_bg.jpg";
+$bg__index-sub-img:
+    "../img/index/plate.jpg",
+    "../img/contact_bg.jpg";
 $bg__privacy-img: "../img/privacy.jpg";
+$bg__regular-menu-img:
+    "../img/index/plate.jpg";
+$bg__regular-menu-sub-img:
+    "../img/contact_bg.jpg";
+$bg__reservation-img:
+    "../img/restaurant_woman.jpg";
+$bg__reservation-sub-img:
+    "../img/contact_bg.jpg";
+$bg__specials-menu-img:
+    "../img/index/plate.jpg";
+$bg__specials-menu-sub-img:
+    "../img/contact_bg.jpg";
+$bg__user-img:
+    "../img/restaurant_woman.jpg";
 $bg__aoa:
     $bg__error-img,
     $bg__comingsoon-img,
-    $bg__privacy-img;
+    $bg__privacy-img,
+    $bg__index-sub-img,
+    $bg__index-img,
+    $bg__regular-menu-img,
+    $bg__regular-menu-sub-img,
+    $bg__specials-menu-img,
+    $bg__specials-menu-sub-img,
+    $bg__reservation-img,
+    $bg__reservation-sub-img,
+    $bg__about-sub-img,
+    $bg__contact-sub-img,
+    $bg__user-img;
 $body__min-height: 100%;
+$border__bottom-line: 1px solid #a78963; 
 $color__bg-1: #ddd;
-$color__dark: #333;
+$color__brw: #a78963;
+$color__dark: #101519;
+$color__gray: #999;
+$color__light-gray: #bbb;
+$color__white: #fff;
 $color__transparent: transparent;
 $font-logo__family: 'Raleway';
 $font-logo__size: 24px;
 $font-main__family: 'Libre Baskerville';
 $font-main__size: 16px;
 $header__height: 74px;
+$hover__filter: brightness(1.2);
 $section__min-height: 100vh;
 $text__shadow: 0 0 3px $color__dark;
-$theme-colors: (
-  "primary": #fff,
-  "secondary": #a78963,
-  "dark":#101519,
-  "transparent":transparent
-);

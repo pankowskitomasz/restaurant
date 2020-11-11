@@ -4,37 +4,493 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Restaurant | Coming soon!</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <title>Restaurant | The art of taste</title>
 </head>
 <body class="bg-dark">
-    <header class="container-fluid position-absolute">
+    <header class="container-fluid position-absolute zindex-10">
         <nav class="navbar navbar-expand-md nabvar-dark bg-transparent">
             <a href="index.html" class="navbar-brand">
                 <img src="img/navbar_logo.png" alt="logo"/>
-                <span class="navbar-text font-logo text-secondary font-weight-bold">
+                <span class="navbar-text font-logo text-primary font-weight-bold">
                     Restaurant
                 </span>
             </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto font-menu rounded-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle nav-link"
+                            data-toggle="dropdown">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu py-0">
+                            <a href="regular-menu.html" class="dropdown-item">
+                                Regular Menu
+                            </a>
+                            <a href="specials-menu.html" class="dropdown-item">
+                                Specials Menu 
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reservation.html" class="nav-link">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.html" class="nav-link">
+                            <span class="fa fa-user-o"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="comingsoon-s1 align-items-center d-flex text-shadow">
+        <section class="index-s1 container-fluid text-shadow p-0 bg-dark">
+            <div class="col-12">
+                <div class="row">
+                    <div class="carousel slide" data-ride="car ousel" id="index-s1-crs">
+                        <ol class="carousel-indicators">
+                            <li data-target="#index-s1-crs" data-slide-to="0" class="active"></li>
+                            <li data-target="#index-s1-crs" data-slide-to="1"></li>
+                            <li data-target="#index-s1-crs" data-slide-to="2"></li>
+                            <li data-target="#index-s1-crs" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item bg-dark active">
+                                <img src="img/index/slide-1.jpg" alt="slide" class="img-fit-top">
+                                <div class="carousel-caption">
+                                    <h2 class="display-4">Best regular menu in town</h2>
+                                    <a href="regular-menu.html" class="btn btn-primary text-white border border-primary">
+                                        Check now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item bg-dark">
+                                <img src="img/index/slide-2.jpg" alt="slide" class="img-fit-top">
+                                <div class="carousel-caption">
+                                    <h2 class="display-4">Check our specials menu</h2>
+                                    <a href="specials-menu.html" class="btn btn-primary text-white border border-primary">
+                                        Check now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item bg-dark">
+                                <img src="img/index/slide-3.jpg" alt="slide" class="img-fit-top">
+                                <div class="carousel-caption">
+                                    <h2 class="display-4">Make reservation</h2>
+                                    <a href="reservation.html" class="btn btn-primary text-white border border-primary">
+                                        Check now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item bg-dark">
+                                <img src="img/index/slide-4.jpg" alt="slide" class="img-fit-top">
+                                <div class="carousel-caption">
+                                    <h2 class="display-3">More about us</h2>
+                                    <a href="about.html" class="btn btn-primary text-white border border-primary">
+                                        Check now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#index-s1-crs" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a href="#index-s1-crs" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="index-s2 container-fluid text-shadow minh-50vh px-0">
             <div class="row justify-content-center mx-0 w-100">
-                <div class="col-10 col-sm-6 text-center text-primary">
-                    <h1 class=" display-4 text-secondary font-weight-bold font-logo">Opening soon :)</h1>
-                    <p class="lead text-shadow">
-                        Hi, we are not ready yet, however we are staring soon.<br> 
-                        Please visit us again in a while.
-                    </p>
+                <div class="col-12 text-center text-white text-shadow minh-25vh px-3 px-md-5 py-5 align-items-center d-flex">
+                    <div>
+                        <h4 class="text-primary text-uppercase mb-3">About us</h4>
+                        <h3 class="display-5 mb-3">Multi-Cuisine Restaurant</h3>
+                        <p class="lead text-muted">
+                            Ever since the day Restora was launched in 1990, it has made a name 
+                            for its diverse cuisine. Within a year of its inauguration, it has 
+                            become the ultimate food place for the city of New York.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 index-sub-s1 minh-50vh"></div>
+            </div>
+        </section>
+        <section class="index-s3 container-fluid align-items-center d-flex bg-light py-5">
+            <div class="row justify-content-center mx-0 w-100 px-3">
+                <div class="col-12 text-center text-white px-3 px-md-5 mb-3">
+                    <h4 class="text-primary text-uppercase mb-3 font-weight-bold">
+                        Our menu
+                    </h4> 
+                    <h3 class="display-6 text-dark mb-3">
+                        Week Specials
+                    </h3>
+                </div>
+                <div class="col-12 col-md-4 px-3">
+                    <h3 class="lead text-uppercase text-primary text-center mt-3">
+                        Steaks
+                    </h3>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Sirloin steak
+                                <span class="h6 float-right text-primary">
+                                    20$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Fire fries, fried jalapeños, and plantains with 
+                                chimichurri sauce.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Grilled Prime Rib
+                                <span class="h6 float-right text-primary">
+                                    17$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Garlic mashed potatoes, vegetables, and 
+                                horseradish cream.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Steak Tartare
+                                <span class="h6 float-right text-primary">
+                                    18$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Cornichon, Crisp Capers, Quail Egg, Fresh 
+                                Horseradish Root, Grilled Sourdough
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Center Cut Filet
+                                <span class="h6 float-right text-primary">
+                                    21$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Roasted peppers, chipotle bordelaise, 
+                                vegetables, and corn pudding
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 px-3">
+                    <h3 class="lead text-uppercase text-primary text-center mt-3">
+                        Grilled Chops
+                    </h3>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Filet
+                                <span class="h6 float-right text-primary">
+                                    22$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                11 ounces most tender cut of lean, midwestern 
+                                beef.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Cowboy Ribeye
+                                <span class="h6 float-right text-primary">
+                                    18$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                22 ounces of marbled and flavored bone-in cut.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                New York Strip
+                                <span class="h6 float-right text-primary">
+                                    14$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                A 16-ounce full-flavored USDA Prime cut.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Cowboy Ribeye
+                                <span class="h6 float-right text-primary">
+                                    21$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Served with soy sauce, wasabi, ginger and 
+                                chopsticks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 px-3">
+                    <h3 class="lead text-uppercase text-primary text-center mt-3">
+                        Our Seafood
+                    </h3>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Sirloin steak
+                                <span class="h6 float-right text-primary">
+                                    20$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Fire fries, fried jalapeños, and plantains with 
+                                chimichurri sauce.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Grilled Prime Rib
+                                <span class="h6 float-right text-primary">
+                                    17$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Garlic mashed potatoes, vegetables, and 
+                                horseradish cream.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Steak Tartare
+                                <span class="h6 float-right text-primary">
+                                    18$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Cornichon, Crisp Capers, Quail Egg, Fresh 
+                                Horseradish Root, Grilled Sourdough
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h6 class="mt-1">
+                                Center Cut Filet
+                                <span class="h6 float-right text-primary">
+                                    21$
+                                </span>   
+                            </h6> 
+                            <p class="text-muted small mt-3">
+                                Roasted peppers, chipotle bordelaise, 
+                                vegetables, and corn pudding
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        <section class="index-s4 container-fluid align-items-center d-flex py-5 bg-dark text-white">
+            <div class="row justify-content-center mx-0 w-100">
+                <div class="col-12 text-left text-shadow px-1 px-md-5 mb-3">
+                    <img src="img/index/cup.svg" alt="cup" class="float-left">
+                    <h5 class="text-primary text-uppercase m-3 font-weight-bold float-left mt-3">
+                        Breakfast Menu
+                    </h5> 
+                </div>
+                <div class="col-12 col-md-6 col-xl-5 px-3">
+                    <h3 class="lead text-uppercase text-primary text-center mt-3">
+                        Everyday Menu
+                    </h3>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Steak Sandwich
+                                <span class="h6 float-right text-primary">
+                                    10$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Deep fried steak, onion, butter and fresh 
+                                roll.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Ham Sandwich 
+                                <span class="h6 float-right text-primary">
+                                    8$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Ham, mayonnaise, eggs and long roll.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Morning Salad
+                                <span class="h6 float-right text-primary">
+                                    9$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Lettuce, tomatoes, mayonanaise and cucumber.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Sandwich Pack
+                                <span class="h6 float-right text-primary">
+                                    19$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Three samll rolls with: ham, eggs and lettuce
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-5 px-3">
+                    <h3 class="lead text-uppercase text-primary text-center mt-3">
+                        Weekend Specials
+                    </h3>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Double Steak Sandwich
+                                <span class="h6 float-right text-primary">
+                                    10$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Deep fried steak, onion, butter and fresh 
+                                roll, double cheese.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Ham Sandwich (Max)
+                                <span class="h6 float-right text-primary">
+                                    8$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Ham, mayonnaise, eggs and double long roll.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Salad Sandwich
+                                <span class="h6 float-right text-primary">
+                                    9$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Lettuce, tomatoes, mayonanaise and grilled 
+                                cucumber in mid-size roll.
+                            </p>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0 border-gray">
+                            <h6 class="mt-1">
+                                Grilled Sandwich
+                                <span class="h6 float-right text-primary">
+                                    19$
+                                </span>   
+                            </h6> 
+                            <p class="font-italic small mt-3">
+                                Grilled rolls with cheese, ham and cucumber.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="index-s5 container-fluid align-items-center d-flex py-5 bg-dark text-white minh-25vh">
+            <div class="row justify-content-center mx-0 w-100">
+                <div class="col-12 text-center text-shadow px-1 px-md-5">
+                    <h3 class="text-primary text-uppercase m-3 font-weight-bold">
+                        Make Reservation
+                    </h3> 
+                    <img src="img/lines_bg.png" alt="lines" class="h-25 mx-auto">
+                </div>
+                <div class="col-10 col-md-8 col-xl-6 px-3">
+                    <form class="text-primary row">
+                        <div class="col-md-6">
+                            <label>Select Date</label>
+                            <input type="datetime-local" 
+                                class="form-control bg-transparent text-dark filter-invert"
+                                name="fdate">
+                            <label class="mt-3">Table size</label>
+                            <select class="form-control bg-transparent text-dark filter-invert"
+                                name="ftablesize">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="6">6 Person</option>
+                            </select>
+                            <label class="mt-3">Full Name</label>
+                            <input type="text" 
+                                class="form-control bg-transparent text-dark filter-invert"
+                                name="fname">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Phone</label>
+                            <input type="tel" 
+                                class="form-control bg-transparent text-dark filter-invert"
+                                name="fname">                        
+                            <label class="mt-3">Email</label>
+                            <input type="email" 
+                                class="form-control bg-transparent text-dark filter-invert"
+                                name="fname">
+                            <div class="w-100 mt-5 text-right">
+                                <input type="reset" value="Clear" 
+                                    class="text-white btn btn-outline-dark border border-primary"> 
+                                <input type="submit" value="Accept" 
+                                    class="text-white btn btn-outline-dark border border-primary"> 
+                            </form>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="index-s6 container-fluid align-items-center d-flex bg-dark text-white minh-25vh border-top border-primary px-0">
+            <div class="row justify-content-center mx-0 w-100">
+                <div class="col-12 col-md-6 index-sub-s2 minh-25vh"></div>
+                <div class="col-12 col-md-6 minh-25vh text-center py-3">
+                    <h3 class="text-primary m-3 font-weight-bold">
+                       Contact us
+                    </h3> 
+                    <ul class="list-unstyled initialism">
+                        <li>2nd Floor, CH Building,</li>
+                        <li>New Design Str 12, NY</li>
+                        <li>(+1)-888-123-3456</li>
+                        <li>contact&#64;restaurant.rt</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="container-fluid bg-dark font-weight-bold text-center text-secondary p-3 border-top border-secondary">
+    <footer class="container-fluid bg-dark font-weight-bold text-center text-primary p-3 border-top border-primary">
         <small class="my-0">
             Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
-            <a class="text-secondary" href="privacy.html">Privacy policy</a>
+            <a class="text-primary" href="privacy.html">Privacy policy</a>
         </small>
     </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
