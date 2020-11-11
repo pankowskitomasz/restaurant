@@ -3,6 +3,7 @@
 }
 body,html{
     min-height: $body__min-height;
+    min-width: $body__min-width;
     overflow-x: hidden;
     width: 100%;
 }
