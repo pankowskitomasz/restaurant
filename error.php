@@ -1,3 +1,15 @@
+<?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(!isset($_SESSION["errorMessage"])){
+    $_SESSION["errorMessage"] = "Unfortunately your message was not send due to technical ";
+    $_SESSION["errorMessage"] .= "problems. Please try again later or contact with us by phone.";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">    
-    <title>Restaurant | About us</title>
+    <title>Restaurant | Message sent</title>
 </head>
 <body class="bg-dark">
     <header class="container-fluid position-absolute px-0">
@@ -16,9 +28,7 @@
                     Restaurant
                 </span>
             </a>
-            <button class="navbar-toggler mr-3" 
-                data-toggle="collapse" 
-                data-target="#main-nav">
+            <button class="navbar-toggler mr-3" data-toggle="collapse" data-target="#main-nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="main-nav">
@@ -59,73 +69,27 @@
         </nav>
     </header>
     <main>
-        <section class="about-s1 container-fluid text-shadow p-0 bg-gray minh-50vh">
-            <div class="col-12">
-                <div class="row">
-                    <div class="carousel slide" data-ride="carousel" id="about-s1-crs">
-                        <ol class="carousel-indicators">
-                            <li data-target="#about-s1-crs" data-slide-to="0" class="active"></li>
-                            <li data-target="#about-s1-crs" data-slide-to="1"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item bg-gray active">
-                                <img src="img/restaurant_woman.jpg" alt="slide" class="img-fit-top img-mul">
-                                <div class="carousel-caption">
-                                    <h2 class="display-5">A unique atmosphere</h2>
-                                </div>
-                            </div>
-                            <div class="carousel-item bg-gray">
-                                <img src="img/contact_bg.jpg" alt="slide" class="img-fit-top img-mul">
-                                <div class="carousel-caption">
-                                    <h2 class="display-5">Modern interior</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#about-s1-crs" class="carousel-control-prev" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a href="#about-s1-crs" class="carousel-control-next" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <section class="user-s1 container-fluid minh-25vh border-bottom border-dark">
         </section>
-        <section class="about-s2 container-fluid text-shadow minh-25vh px-0 d-flex align-items-center">
-            <div class="row justify-content-center mx-0 w-100">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center text-white text-shadow px-3 py-5">
-                    <div>
-                        <h4 class="text-primary text-uppercase mb-3">About us</h4>
-                        <h3 class="h5 mb-3">Multi-Cuisine Restaurant</h3>
-                        <p class="initialism text-muted">
-                            Ever since the day Restora was launched in 1990, it has made a name 
-                            for its diverse cuisine. Within a year of its inauguration, it has 
-                            become the ultimate food place for the city of New York.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 about-sub-s1 minh-50vh"></div>
-            </div>
-        </section>
-        <section class="about-s3 container-fluid minh-25vh px-0 bg-light">
+        <section class="user-s2 align-items-center d-flex bg-white text-white minh-50vh p-5">
             <div class="row mx-0 w-100">
-                <div class="col-12 col-md-6 text-center text-white minh-25vh p-5 align-items-center d-flex">
-                    <div>
-                        <h4 class="text-primary text-uppercase mb-3">Traditional Cuisine</h4>
-                        <p class="initialism text-muted">
-                            Since the very begining of our restaurant our chief serves
-                            special dishes based on traditional local and regional 
-                            couisine. Each dish is prepared from fresh ingrediends 
-                            delivered by local farmers.
-                        </p>
+              <div class="col-10 col-sm-8 col-md-6 col-lg-4 offset-1 offset-sm-2 offset-md-3 offset-lg-4 text-center">
+                    <div class="alert alert-danger">
+                        <h3 class="text-center font-header">Error!</h3>
+                        <p class="initialism">
+                            <?php
+                                echo $_SESSION["errorMessage"];
+                            ?>
+                        </p>                  
+                        <a href="reservation.html" 
+                            class="btn btn-danger">Back</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 about-sub-s2 minh-50vh bg-gray"></div>
             </div>
         </section>
-        <section class="about-s4 container-fluid align-items-center d-flex bg-dark text-white minh-25vh border-top border-primary px-0">
+        <section class="index-s6 container-fluid align-items-center d-flex bg-dark text-white minh-25vh border-top border-primary px-0">
             <div class="row justify-content-center mx-0 w-100">
-                <div class="col-12 col-md-6 about-sub-s3 minh-50vh"></div>
+                <div class="col-12 col-md-6 index-sub-s2 minh-25vh"></div>
                 <div class="col-12 col-md-6 minh-25vh text-center py-3 d-flex align-items-center">
                     <div class="w-100">
                         <h3 class="text-primary m-3 font-weight-bold">
@@ -141,7 +105,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main> 
     <footer class="container-fluid bg-dark font-weight-bold text-center text-primary p-3 border-top border-primary">
         <small class="my-0">
             Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
@@ -190,3 +154,4 @@
     <script src="js/main.min.js"></script>
 </body>
 </html>
+<?php $_SESSION["errorMessage"]=null ?>

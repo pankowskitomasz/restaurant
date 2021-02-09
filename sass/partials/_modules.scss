@@ -97,9 +97,8 @@
     &-fit{
         &-top{
             @extend %mix-over;
-            @include calc-param(min-height, $section__min-height, 0px); 
             @include calc-param(height, $section__min-height, 0px); 
-            @include calc-param(max-height, $section__min-height, 0px); 
+            min-height: 220px;
             object-fit: cover;
             width:100%;
         }
@@ -212,6 +211,14 @@
         }
     } 
 }
+.section{
+    &-adjust{
+        &-top{
+            @include calc-param(height,100vh,57px);
+            @include calc-param(min-height,100vh,57px);
+        }
+    }
+}
 .specials{
     &-menu{
         &-s1{
@@ -236,7 +243,10 @@
         text-shadow: $text__shadow;
     }
 }
-.zindex{
+.z{
+    &-0{
+        z-index:0;
+    }
     &-10{
         z-index: 10;
     }
@@ -251,6 +261,14 @@ a{
         color: $color__white !important;
         filter: $hover__filter;
     }
+}
+
+main{
+    z-index: 0;
+}
+
+nav{
+    z-index:100;
 }
 
 @media all and (max-width: 767px){
