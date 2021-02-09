@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">    
     <title>Restaurant | Contact us</title>
 </head>
 <body class="bg-dark">
-    <header class="container-fluid position-absolute zindex-10">
-        <nav class="navbar navbar-expand-md nabvar-dark bg-transparent">
-            <a href="index.html" class="navbar-brand">
+    <header class="container-fluid position-absolute px-0">
+        <nav class="navbar navbar-expand-md nabvar-dark bg-transparent px-0">
+            <a href="index.html" class="navbar-brand ml-3">
                 <img src="img/navbar_logo.png" alt="logo"/>
                 <span class="navbar-text font-logo text-primary font-weight-bold">
                     Restaurant
                 </span>
             </a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+            <button class="navbar-toggler mr-3" data-toggle="collapse" data-target="#main-nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="main-nav">
@@ -50,7 +48,7 @@
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="user.html" class="nav-link">
+                        <a href="user.php" class="nav-link">
                             <span class="fa fa-user-o"></span>
                         </a>
                     </li>
@@ -61,17 +59,19 @@
     <main>
         <section class="contact-s1 container-fluid align-items-center d-flex bg-dark text-white minh-50vh border-bottom border-primary px-0">
             <div class="row mx-0 w-100">
-                <div class="col-12 contact-sub-s1 minh-50vh bg-gray"></div>
-                <div class="col-12 minh-25vh text-center py-3 justify-content-center ">
-                    <h3 class="text-primary m-3 font-weight-bold">
-                       Contact us
-                    </h3> 
-                    <ul class="list-unstyled initialism">
-                        <li>2nd Floor, CH Building,</li>
-                        <li>New Design Str 12, NY</li>
-                        <li>(+1)-888-123-3456</li>
-                        <li>contact&#64;restaurant.rt</li>
-                    </ul>
+                <div class="col-12 contact-sub-s1 minh-25vh bg-gray"></div>
+                <div class="col-12 minh-25vh text-center py-3 d-flex justify-content-center align-items-center">
+                    <div class="w-100">
+                        <h3 class="text-primary m-3 font-weight-bold">
+                        Contact us
+                        </h3> 
+                        <ul class="list-unstyled initialism">
+                            <li>2nd Floor, CH Building,</li>
+                            <li>New Design Str 12, NY</li>
+                            <li>(+1)-888-123-3456</li>
+                            <li>contact&#64;restaurant.rt</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -84,7 +84,10 @@
                     <img src="img/lines_bg.png" alt="lines" class="h-25 mx-auto">
                 </div>
                 <div class="col-10 col-md-8 col-xl-6 px-3">
-                    <form class="text-primary row">
+                    <form class="text-primary row"
+                        autocomplete="off"
+                        action="error.php"
+                        method="POST">
                         <div class="col-md-6">
                             <label>Select Date</label>
                             <input type="datetime-local" 
@@ -107,17 +110,20 @@
                             <label>Phone</label>
                             <input type="tel" 
                                 class="form-control bg-transparent text-dark filter-invert"
-                                name="fname">                        
+                                name="fphone">                        
                             <label class="mt-3">Email</label>
                             <input type="email" 
                                 class="form-control bg-transparent text-dark filter-invert"
-                                name="fname">
+                                name="fmail">
                             <div class="w-100 mt-5 text-right">
-                                <input type="reset" value="Clear" 
+                                <input type="reset" 
+                                    value="Clear" 
                                     class="text-white btn btn-outline-dark border border-primary"> 
-                                <input type="submit" value="Accept" 
+                                <input type="submit" 
+                                    value="Accept" 
+                                    name="makereservation"
                                     class="text-white btn btn-outline-dark border border-primary"> 
-                            </form>
+                            </div>
                     </form>
                 </div>
             </div>
@@ -125,11 +131,49 @@
     </main>
     <footer class="container-fluid bg-dark font-weight-bold text-center text-primary p-3 border-top border-primary">
         <small class="my-0">
-            Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
+            Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
             <a class="text-primary" href="privacy.html">Privacy policy</a>
         </small>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="privacyModal">
+        <div class="modal-dialog font-header">
+            <div class="modal-content border-green p-2">
+                <div class="modal-header text-center">
+                    <h4 class="font-header text-green font-weight-bold">GPDR Declaration</h4>
+                    <a href="#privacyModal" 
+                        data-target="#privacyModal"
+                        data-dismiss="modal"
+                        class="close text-green">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p class="initialism">
+                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                        in long term meaning (longer than needed for website operation during visitor's
+                        presence), any user (visitor) data.
+                    </p>
+                    <p class="initialism pt-2">
+                        All information collected during visitor's 
+                        presence on this website is used only for technical purposes, required for 
+                        correct operation of website or demonstration purposes related to technical 
+                        mechanisms and presentation of its operation... 
+                        <a href="privacy.html" class="text-green font-weight-bold">More about privacy</a>
+                    </p>                        
+                    <p class="initialism pt-2">
+                        If you accept privacy policy please click button "accept". If you 
+                        refuse it, leave page by closing it in your web browser, please.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark mx-auto"
+                        onclick="acceptPrivacyPolicy()">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="js/main.min.js"></script>
 </body>
 </html>
