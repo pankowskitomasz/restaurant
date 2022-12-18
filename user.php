@@ -11,7 +11,7 @@ include_once "php/t_user.php";
 
 //to remove after pub
 //include_once "php/support.php";
-//createAdminAccount("password","admin@mussodent.com","9731");
+//createAdminAccount("password","admin@restaurant.com","9731");
 
 if(isset($_POST["username"])
 && isset($_POST["userpass"])){
